@@ -6,6 +6,7 @@ import sklearn
 from sklearn.model_selection import train_test_split
 import functions
 import nltk
+# nltk.download('stopwords')
 from nltk.corpus import stopwords
 TweetUrl = 'https://github.com/aasiaeet/cse5522data/raw/master/db3_final_clean.csv'
 tweet_dataframe = pd.read_csv(TweetUrl)

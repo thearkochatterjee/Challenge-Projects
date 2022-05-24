@@ -18,6 +18,7 @@ soup = BeautifulSoup(response.text, 'lxml')
 
 print(str(response.status_code) + " is the response status code")
 full_text = soup.prettify()
+print(full_text)
 full_text_arr = full_text.split('\n')
 for i in range(0, len(full_text_arr)):
     if full_text_arr[i][0] == "<":
