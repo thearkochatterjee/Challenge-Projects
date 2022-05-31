@@ -11,8 +11,9 @@ def getPage(company: str) -> requests.models.Response:
 def get_soup(page: requests.models.Response):
     return BeautifulSoup(page.content, 'lxml')
 
-company = 'tesla'
-response = requests.get('https://theverge.com/search?q=' + company)
+company = 'apple'
+# response = requests.get('https://www.google.com/search?q=' + company + '&tbm=nws&start=0')
+response = requests.get('https://news.search.yahoo.com/search?p=' + company + '&fr2=piv-web&fr=news&guccounter=1')
 soup = BeautifulSoup(response.content, 'lxml')
 print(soup)
 # page = getPage('apple')
